@@ -1,0 +1,218 @@
+﻿
+@font-face {
+    font-family: 'lato-heavy';
+    src: url('../../assets/fonts/Lato-Heavy.ttf') format('truetype');
+}
+
+.statisticSection {
+    position: relative;
+}
+    .statisticSection .sec-container h1 {
+        text-align: center;
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+
+.left-content-header p{
+    font-family: sf-display-light;
+}
+.content-header p {
+    font-family: sf-display-light;
+    margin-bottom: 20px;
+}
+.left-content > * {
+    margin-bottom: 10px;
+}
+.left-content hr {
+    width: 100%;
+    color: #EBF2FD;
+}
+.right-content {
+    text-align: center;
+}
+.right-content img{
+    max-width: 85%;
+}
+.statistic-des-container {
+    display:flex;
+}
+.statistic-des-container img {
+    width: 22px;
+    margin-right: 10px;
+}
+.content-main-item {
+    height: 100%;
+}
+.content-main {
+    padding-bottom: 20px ;
+}
+.content-main .statistic-logo {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    width: 100%;
+    gap: 2%;
+    padding: 0 15px;
+}
+
+.statistic-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #F4F8FB;
+    height: 40px;
+}
+.statistic-logo .logo-container {
+    text-align: center;
+    padding: 15px;
+    background: #F4F8FB;
+    border-radius: 8px;
+}
+.statistic-logo img {
+    height: 60px;
+}
+
+.statistic-number-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: inherit;
+}
+.statistic-num {
+    font-size: 3rem;
+    color: aliceblue;
+    line-height: normal;
+    letter-spacing: normal;
+    pointer-events: auto;
+    font-weight: 700;
+    background: linear-gradient(to right, #0873D6 0%, #0835D6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+.statistic-des {
+    color: #565E64;
+    font-family: sf-display-light;
+}
+
+.statistic-item {
+    border-right: 2px solid #fff;
+    display: inline-grid;
+}
+
+.statistic-item:last-child {
+    border: none !important;
+}
+
+@media (max-width: 1024px) {
+    .statisticSection .row {
+        padding: 0.75rem 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .content-header{
+        text-align: justify;
+        margin: 0;
+    }
+    .content-header h2{
+        text-transform: uppercase;
+    }
+
+    .statisticSection .row .first-child {
+        border-right: 1px solid #fff;
+    }
+
+    .statisticSection .sec-container {
+        width: 100%;
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+
+    .content-main {
+        bottom: 5%;
+        padding: 0 40px 40px 40px;
+    }
+    .content-main .statistic-logo{
+        padding:0;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1024px) {
+    .statistic-num {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .statistic-des {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .statistic-item {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 849px) {
+
+    .statistic-num {
+        font-size: 2.25rem;
+        margin-bottom: 0;
+    }
+
+    .statistic-des {
+        font-size: 1rem;
+    }
+
+    .statisticSection .row {
+        padding: 0.25rem 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 549px) {
+    .statisticSection .row {
+        padding: 0.25rem 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .statistic-num {
+        font-size: 1.75rem;
+        margin-bottom: 0;
+    }
+    .content-main .statistic-logo {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        width: 100%;
+        gap: 2%;
+        margin-top: 20px;
+    }
+    .statistic-des {
+        font-size: 16px;
+    }
+    .img-statistic .content-main {
+        padding: 0 15px 15px 15px;
+    }
+}
+#circle-statistic {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #dd9d11;
+    animation: animate 20s infinite linear;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    
+    }
+}

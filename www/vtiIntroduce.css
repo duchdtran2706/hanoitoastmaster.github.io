@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'poppins-italic';
+    src: url('../../assets/fonts/Poppins-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'lato-heavy';
+    src: url('../../assets/fonts/Lato-Heavy.ttf') format('truetype');
+}
+
+.vti-introduce {
+    background-color: #0b3265;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: none;
+}

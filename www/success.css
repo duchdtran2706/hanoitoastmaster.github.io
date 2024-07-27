@@ -1,0 +1,86 @@
+﻿.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.inner-sc {
+    display: flex;
+}
+
+    .inner-sc img {
+        width: 80px;
+        height:80px;
+    }
+
+    .inner-sc p {
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 20px;
+        color: #606060;
+    }
+
+.success-content p {
+    font-size: 16px;
+    color: #222;
+}
+#successResetPwModal .modal-dialog {
+    top: 200px;
+    width: fit-content;
+}
+.btn-backtologin{
+    font-family: sf-display-light;
+}
+.success-content button {
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px;
+    color: #fff;
+    background-color: #005BA2;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#success-setting-popup-id {
+    margin-top: 230px;
+}
+    #success-setting-popup-id .modal-dialog {
+        max-width: 470px;
+    }
+    #success-setting-popup-id .modal-dialog .modal-content .modal-body {
+        text-align: center;
+    }
+    #success-setting-popup-id .modal-dialog .modal-content .modal-footer {
+        border: unset;
+        text-align: center;
+        display: block;
+        padding: 0 0 10px 0;
+    }
+
+@media(max-width : 1024px) {
+    .radius-border {
+        border-radius: 20px;
+    }
+    .success-content {
+        text-align :center;
+    }
+    #success-setting-popup-id .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    #success-setting-popup-id .col-4 {
+        display: none;
+    }
+}
+
+@media(max-width : 400px){
+    .inner-sc p {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,476 @@
+﻿.life-at-vti {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: unset;
+    margin-top: 30px;
+}
+    .life-at-vti .header p{
+        font-size: 20px;
+    }
+
+    .life-at-vti .slider-container .row {
+        margin: 0 auto;
+        width: 85%;
+        overflow: hidden;
+        opacity: 1;
+        display: none;
+    }
+
+    .life-at-vti .slider-container .active-left {
+        position: relative;
+        display: flex !important;
+        animation: active-left .5s ease-in-out;
+    }
+
+    .life-at-vti .slider-container .active-right {
+        position: relative;
+        display: flex !important;
+        animation: active-right .5s ease-in-out;
+    }
+
+    .life-at-vti .slider-container .in-active-left {
+        position: relative;
+        display: flex !important;
+        animation: in-active-left .5s ease-in-out;
+    }
+
+    .life-at-vti .slider-container .in-active-right {
+        position: relative;
+        display: flex !important;
+        animation: in-active-right .5s ease-in-out;
+    }
+.life-at-vti .text-center {
+    font-family: sf-display-light;
+}
+.life-at-vti .header h1 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.life-at-vti .content-container {
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.left-tab {
+    display: grid;
+    border-right: 2px dashed #DAE2EE;
+}
+
+.left-tab button {
+    border-radius: 0;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: left;
+    border: none;
+    background: unset;
+    font-family: sf-display-bold;
+    color: #272E4E;
+    padding: 20px;
+    max-width: 550px;
+    clip-path: polygon( 0 0, 0 0, 0 100%, calc(100% - 40px) 100%, 100% 50%, calc(100% - 40px) 0 );
+}
+
+.left-tab button svg {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.left-tab button:hover {
+    background: linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+    color: #fff;
+}
+.active-btn {
+    background: linear-gradient(90deg, #0873D6 0%, #0835D6 100%) !important;
+    color: #fff !important;
+}
+.active-icon path{
+    fill: #fff;
+}
+.left-tab hr{
+    width: 100%;
+    border-top: 2px dashed #DAE2EE;
+}
+.life-at-vti .right-modal {
+    padding: 0 30px;
+    overflow: hidden;
+}
+.life-at-vti-content {
+    text-align: center;
+    display: none;
+    max-height: 570px;
+    -webkit-transition: all .3s ease;
+}
+.life-at-vti-content > img{
+    margin-bottom: 10px;
+}
+.life-at-vti-content p{
+    font-family: sf-display-light;
+}
+.life-at-vti-content h5{
+    font-family: sf-display-bold;
+}
+    .life-at-vti-content img {
+        max-height: 340px;
+        border-radius: 16px;
+    }
+
+@keyframes active-left {
+    0% {
+        opacity: 0;
+        /*        left: calc(100vh);*/
+    }
+
+    100% {
+        opacity: 1;
+        /*        left: 0;*/
+    }
+}
+
+@keyframes active-right {
+    0% {
+        opacity: 0;
+        /*        left: calc(100vh*(-1));*/
+    }
+
+    100% {
+        opacity: 1;
+        /*        left: 0;*/
+    }
+}
+
+@keyframes in-active-left {
+    0% {
+        opacity: 1;
+        /*        left: 0;*/
+    }
+
+    100% {
+        opacity: 0;
+        /*        left: calc(100vh*1.5*(-1));*/
+    }
+}
+
+@keyframes in-active-right {
+    0% {
+        opacity: 1;
+        /*        left: 0;*/
+    }
+
+    100% {
+        opacity: 0;
+        /*        left: calc(100vh*1.5);*/
+    }
+}
+
+.life-at-vti .slider-container .slider-img {
+    padding: 0;
+}
+
+.bottom-body {
+    margin: 25px 0;
+}
+
+    .bottom-body ul {
+        margin: 0 auto;
+        padding: 0;
+        width: 85%;
+    }
+
+.life-at-vti .slider-img img, .img-preview img {
+    width: 100%;
+}
+
+.life-at-vti .img-preview {
+    margin-bottom: 10px;
+}
+
+    .life-at-vti .img-preview img {
+        cursor: pointer;
+        opacity: 0.5;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+.life-at-vti .opacity-off .img-preview img {
+    border: solid 2px #7091c1;
+}
+
+.life-at-vti .opacity-off img {
+    opacity: 1 !important;
+}
+
+.life-at-vti .opacity-off .title-preview {
+    color: #dd9d11;
+}
+
+.life-at-vti .slide-content {
+    padding: 4% 4% 0 4%;
+    color: #fff;
+}
+
+.life-at-vti .slider-content-pdg-adjust {
+    padding-top: 3%;
+}
+
+.life-at-vti .slide-content .slider-title {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.life-at-vti .title-preview {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #2a3d75;
+}
+
+.life-at-vti .nar-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7.5%;
+    padding: 24% 0;
+    opacity: 0.7;
+}
+
+    .life-at-vti .nar-arrow:hover {
+        opacity: 1;
+    }
+
+    .life-at-vti .nar-arrow .arrow-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 35px;
+        background-color: #353535 !important;
+    }
+
+    .life-at-vti .nar-arrow:first-child .arrow-container {
+        float: left;
+    }
+
+    .life-at-vti .nar-arrow:last-child .arrow-container {
+        float: right;
+    }
+
+    .life-at-vti .nar-arrow img {
+        width: 16px;
+        height: auto;
+    }
+
+.life-at-vti .nar-arrow-left {
+    left: 0;
+}
+
+.life-at-vti .nar-arrow-right {
+    right: 0;
+}
+
+.more {
+    color: #7f7f7f;
+    grid-column-start: 2;
+    font-style: italic;
+    font-family: lato-light;
+    float: right;
+    font-size: 15px;
+}
+
+.see-more {
+    height: 20px;
+}
+
+.see-less {
+    width: 20px;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .slick-dots li button:before{
+        font-size: 0;
+    }
+
+    .is-mobile .life-at-vti .slider-nav {
+        display: none;
+    }
+
+    .slick-dots{
+        position: unset;
+        margin-top: 10px;
+    }
+
+    .life-at-vti .sec-container{
+        margin-bottom: 20px;
+        padding: 0 20px;
+    }
+
+    .life-at-vti .slider-for .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .life-at-vti .slick-track{
+        display: flex;
+    }
+
+    .life-at-vti .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .life-at-vti .slide-content .slider-title {
+        font-weight: 500;
+    }
+
+    .life-at-vti .slider-item {
+        justify-self: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 37vh;
+        background-color: rgba(0, 0, 0, 0.30);
+        border-radius: 16px;
+    }
+
+    .life-at-vti .slider-img {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .life-at-vti .slider-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .life-at-vti .slide-content {
+        padding: 40px 40px 40px 40px;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        display: flex;
+        align-items: end;
+    }
+
+    .life-at-vti .slider-item {
+        position: relative;
+    }
+        .life-at-vti .slider-item .slide-content-wrapper {
+            overflow: auto;
+            width: 100%;
+            height: 100%;
+            transition: height 0.5s ease;
+        }
+            .life-at-vti .slider-item .slide-content-wrapper.collapsed {
+                height: 120px;
+            }
+        
+
+    .life-at-vti .slider-item .collapse-toggle {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+    }
+    .life-at-vti .slider-item .collapse-toggle img {
+        width: 30px;
+    }
+
+        .life-at-vti .slider-item .collapse-toggle a {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+    .life-at-vti .slide-content .slider-description {
+        font-family: sf-display-light;
+    }
+    .life-at-vti .slick-dots {
+        display: flex;
+        justify-content: center;
+    }
+
+        .life-at-vti .slick-dots button {
+            border-radius: 50%;
+            margin: 10px;
+            font-size: 0;
+            background-color: #005ba2;
+            opacity: 0.5;
+            border: none;
+        }
+
+    .life-at-vti .slick-dots li.slick-active button {
+        opacity: 1;
+    }
+ 
+}
+
+@media (max-width: 1024px) and (min-width: 728px) {
+
+    .life-at-vti .sec-container .slider-for{
+        margin: 0 30px;
+    }
+
+    .life-at-vti .slide-content .slider-title {
+        font-size: 4vw;
+    }
+
+    .life-at-vti .slide-content .slider-description{
+        font-size: 20px;
+    }
+
+    .more {
+        font-size: 3vw;
+    }
+
+    .life-at-vti .slick-dots li button {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 727px) and (min-width: 376px) {
+
+    .life-at-vti .slick-dots li button {
+        width: 15px;
+        height: 15px;
+    }
+    .more {
+        font-size: 3vw;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .life-at-vti .slide-content {
+        padding: 20px 20px 20px 20px;
+    }
+    .life-at-vti .sec-container {
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+}
+@media (max-width: 375px) {
+
+    .life-at-vti .sec-container {
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    .life-at-vti .slick-dots li button {
+        width: 10px;
+        height: 10px;
+    }
+}

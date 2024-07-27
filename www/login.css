@@ -1,0 +1,365 @@
+﻿@font-face {
+    font-family: 'lato-bold';
+    src: url('../../assets/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato-italic';
+    src: url('../../assets/fonts/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato-light';
+    src: url('../../assets/fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../../assets/fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato-heavy';
+    src: url('../../assets/fonts/Lato-Heavy.ttf') format('truetype');
+}
+
+#loginModal .display-grid {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+
+#loginModal.home-modal .modal-content {
+    padding: 40px;
+    gap: 2%
+}
+#loginModal .modal-dialog .modal-content .modal-image {
+    background: url('/images/login.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#loginModal.home-modal .modal-header {
+    padding-bottom: 0;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-header img {
+    width: 15%;
+    margin-bottom: 1rem;
+}
+
+#loginModal.home-modal .modal-content {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.home-modal .modal-header {
+    position: unset;
+}
+
+.home-modal .form-confirm {
+    border: none;
+}
+
+.home-modal .form-group-parent {
+    width: 100%;
+}
+
+.home-modal .form-group-parent .form-group {
+    margin-bottom: 0;
+    border-radius: 3px;
+    position: relative;
+    /* display: flex; */
+}
+
+
+.home-modal .form-group-parent .form-group i {
+    margin-left: 20px;
+    font-family: lato-italic
+}
+
+.login-icon {
+    max-width: 17px;
+    position: absolute;
+    left: 7%;
+    margin-top: 6px;
+}
+
+.home-modal .checkbox {
+    margin-right: 9px;
+    width: 13px;
+    height: 13px;
+}
+
+.home-modal .login_check,
+.home-modal .login_uncheck {
+    padding-bottom: 5px;
+}
+
+::-webkit-input-placeholder {
+    font-style: inherit!important;
+}
+
+#loginModal.home-modal .modal-body {
+    padding: 0;
+    text-align: -webkit-center;
+}
+
+.home-modal .modal-footer {
+    padding: 0;
+    border-top: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .home-modal .modal-footer button {
+        -webkit-transition: all 0.4s ease;
+        background: linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+        justify-content: center;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 0;
+        padding: 0.7em 2.5em;
+        align-items: center;
+        font-size: 16px;
+        border-radius: 8px;
+        text-transform: uppercase;
+    }
+
+
+.home-modal .form-group {
+    min-height: 30px;
+    border-radius: 3px;
+    /* display: flex; */
+    flex-direction: row;
+}
+
+
+    .home-modal .form-group.small.clearfix {
+        font-family: lato-light;
+        margin-bottom: 0px !important;
+    }
+
+.home-modal .modal-header button {
+    /* width: 10px; */
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border-radius: 50%;
+    height: 10px;
+    opacity: 1;
+}
+
+    .home-modal .modal-header button span {
+        font-family: 'sf-display-bold';
+        color: aliceblue;
+        position: absolute;
+        top: 2px;
+        right: 7px;
+    }
+
+#loginModal.home-modal .modal-dialog {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10040;
+    overflow: hidden;
+    margin: 0.5rem auto 4rem;
+}
+
+.home-modal .modal-title .close {
+    background-image: url('../images/login/_compound path_.png');
+}
+
+.home-modal .modal-header {
+    text-transform: none;
+}
+
+.home-modal .modal-header .close img {
+    width: 25px;
+}
+
+.login-form {
+    font-size: 16px;
+    font-family: sf-display-light;
+}
+
+.footer-dis {
+    font-family: sf-display-light;
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px !important;
+}
+
+    .footer-dis a {
+        background: linear-gradient(to right, #0873D6 0%, #0835D6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: sf-display-bold;
+        border-bottom: 2px solid;
+    }
+
+.login-header img {
+    width: 40%;
+}
+
+.login-hd-content {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-family: sf-display-light;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    color: #272E4E;
+    text-align: center;
+}
+
+.login-hd-title {
+    line-height: 1.5;
+    font-size: 24px;
+    font-family: sf-display-bold;
+    margin-bottom: 1rem;
+    color: #272E4E;
+    text-align: center;
+}
+
+.forgot-link {
+    text-decoration: none !important;
+    font-family: sf-display-light;
+    font-size: 14px;
+    font-style: italic;
+    background: linear-gradient(to right, #0873D6 0%, #0835D6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px !important;
+    border-bottom: 1px solid;
+    line-height: 15px;
+    padding-right: 5px;
+}
+
+#LoginFormUser {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    #LoginFormUser .validator-message {
+        text-align: left;
+    }
+#LoginFormUser .placeholder{
+    text-align: start; 
+}
+.btn-backtologin {
+    cursor: pointer
+}
+
+span.text-danger.field-validation-error {
+    color: red !important;
+}
+
+.remember-me-wrap{
+    width: 100%;
+}
+.remember-me-wrap > div{
+    text-align: left;
+    padding-left: 20px;
+}
+
+@media (max-width:1200px) {
+    .home-modal .modal-dialog {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (min-width:1025px) {
+    #loginModal.home-modal .modal-dialog {
+        max-width: 60%;
+        min-width: 900px;
+    }
+    .home-modal .modal-footer button:hover {
+        box-shadow: 0 0 12px 6px white;
+        background: white;
+        color: #0835D6;
+        border: 1px solid #0835D6;
+    }
+}
+@media (max-width:1024px) {
+
+    #loginModal .display-grid {
+        display: grid !important;
+        grid-template-columns: unset !important;
+    }
+    #loginModal .modal-dialog {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 15vw;
+    }
+    #loginModal .modal-image {
+        height: 200px;
+    }
+    .login-hd-content {
+        margin-bottom: 10px !important;
+    }
+
+    .login-icon{
+        margin-top: 4px;
+    }
+  
+}
+@media screen and (max-height: 700px) {
+    #loginModal .modal-dialog {
+        top: 100px;
+    }
+}
+
+@media (max-width: 579px) {
+    #loginModal .modal-dialog {
+        top: 75px !important;
+        margin: 0;
+    }
+}
+@media (max-width: 480px) {
+    .modal-dialog .modal-content .modal-body {
+        padding: 0 !important;
+    }
+
+    #LoginFormUser .form-group .input span.placeholder {
+        font-size: 14px;
+    }
+
+    #loginModal.home-modal .modal-content {
+        padding: 20px;
+    }
+}
+@media (max-width:400px) {
+    .login-hd-content {
+        width: 80%;
+    }
+    #loginModal .modal-dialog {
+        top: 75px !important;
+        margin: 0;
+    }
+}
+
+

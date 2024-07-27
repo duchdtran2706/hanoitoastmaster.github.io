@@ -1,0 +1,551 @@
+﻿.hot-job {
+    height: 100%;
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: unset;
+}
+#hot-job .header-title {
+    margin-bottom: 50px;
+}
+
+.header-title h2{
+    text-transform: uppercase;
+}
+.hot-job .slider-container .row {
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+    .hot-job .slider-container .slide-content {
+        background-color: #dd9d11;
+    }
+
+    .hot-job .slider-container .slider-img {
+        padding: 0;
+    }
+
+    .hot-job .slide-content {
+        padding: 5%;
+        color: #fff;
+    }
+
+        .hot-job .slide-content .slider-title {
+            font-size: 3.2em;
+            font-weight: 500;
+        }
+
+        .hot-job .slide-content .slider-description {
+            font-size: 1.4em;
+        }
+
+/* 3D Gallery */
+.dg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /*min-height: 500px;*/
+    position: relative;
+}
+
+.dg-wrapper {
+    width: 50%;
+    height: calc(100vw/5);
+    min-height: 350px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+
+    .dg-wrapper .dg-wrapper-item {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .dg-wrapper .dg-wrapper-item .over-lay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 9993;
+        background: rgba(0, 0, 0, 0.5);
+        animation-name: example;
+        animation-duration: 0.7s;
+        border-radius: 16px;
+    }
+
+@keyframes example {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+.dg-wrapper .dg-wrapper-item .dg-transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.dg-wrapper .dg-wrapper-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.dg-wrapper .dg-wrapper-item .descriptions-container {
+    display: none;
+}
+
+.dg-wrapper .dg-center {
+    margin-left: -15px !important;
+}
+
+    .dg-wrapper .dg-center .over-lay {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .dg-wrapper .dg-center .descriptions-container {
+        display: block !important;
+        background: url('/home/images/hot-job/hot-job-bg.png'), linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        width: 47%;
+        height: 100%;
+        padding: 20px;
+        z-index: 9999;
+        -webkit-transform: translate(30px) scale(1.1);
+        -moz-transform: translate(30px) scale(1.1);
+        -o-transform: translate(30px) scale(1.1);
+        -ms-transform: translate(30px) scale(1.1);
+        transform: translate(30px) scale(1.1);
+        border-radius: 16px;
+    }
+
+        .dg-wrapper .dg-center .descriptions-container hr {
+            border-color: #fff;
+            width: 100%;
+        }
+
+        .dg-wrapper .dg-center .descriptions-container .btn-wrap {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+        }
+        .dg-wrapper .dg-center .descriptions-container .btn-custom {
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: .375em .75em;
+            font-family: sf-display-medium;
+            font-size: 16px;
+        }
+
+            .dg-wrapper .dg-center .descriptions-container .btn-custom:hover {
+                color: #5a90ca;
+                background: #fff;
+            }
+
+        .dg-wrapper .dg-center .descriptions-container .descriptions-header {
+            font-size: 20px;
+            word-break: break-word;
+        }
+
+        .dg-wrapper .dg-center .descriptions-container .descriptions-content {
+            word-break: break-word;
+            font-family: sf-display-light;
+            max-height: 215px;
+            overflow: hidden;
+            font-size: 16px;
+        }
+        .dg-wrapper .dg-center .descriptions-container .descriptions-content p{
+            text-align: start;
+        }
+
+.descriptions-container-mb .des-content-mb {
+    text-align: unset;
+    font-family: sf-display-light;
+}
+.dg-wrapper .slick-slide > div {
+    width: 100%
+}
+.dg-wrapper .dg-wrapper-item .span-left,
+.dg-wrapper .dg-wrapper-item .span-right {
+    background: url('/home/images/hot-job/hot-job-bg.png'), linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+    position: absolute;
+    top: 0;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    height: 100%;
+    z-index: 9997;
+    padding-top: .375em;
+    padding-bottom: 0.375em;
+    word-break: break-word;
+}
+
+.dg-wrapper .dg-wrapper-item .span-left {
+    left: 0;
+    writing-mode: vertical-rl;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.dg-wrapper .dg-wrapper-item .span-right {
+    right: 0;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    width: 80px;
+}
+
+.dg-wrapper .dg-center .span-left,
+.dg-wrapper .dg-center .span-right {
+    display: none !important;
+}
+
+.dg-transition {
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+/* End 3D Gallery */
+/* Nar Arrow */
+.hot-job .nar-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 280px;
+    bottom: 0;
+    width: 4%;
+    height: fit-content;
+}
+
+    .hot-job .nar-arrow:hover {
+        opacity: 0.7;
+    }
+
+    .hot-job .nar-arrow .arrow-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 37px;
+        background: linear-gradient(90deg, #0873D6 0%, #0835D6 100%) !important;
+    }
+
+    .hot-job .nar-arrow img {
+        width: 16px;
+        height: auto;
+    }
+
+.hot-job .nar-arrow-left {
+    left: 0;
+}
+
+.hot-job .nar-arrow-right {
+    right: 0;
+}
+
+.hot-job .nar-arrow-left .arrow-container {
+    float: left;
+}
+
+.hot-job .nar-arrow-right .arrow-container {
+    float: right;
+}
+
+/* End Nar Arrow */
+input.btn-seeJob {
+    background: linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 0.475em 2em;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 3.25rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+input.btn-seeJob:hover {
+    box-shadow: 0 0 12px 6px white;
+    background: white;
+    color: #0835D6;
+    border: 1px solid #0835D6;
+}
+
+.hidden-overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media (max-width: 1850px) {
+    .dg-wrapper .dg-center .descriptions-container .descriptions-content {
+        max-height: 170px;
+    }
+}
+@media (max-width: 1024px) {
+    /*#hot-job {
+        background: none;
+    }*/
+
+    #hot-job input.btn-seeJob {
+        margin-top: 0;
+    }
+
+    #hot-job {
+        min-height: 0;
+        margin-top: 30px;
+    }
+        #hot-job .header-title {
+            margin-bottom: 20px;
+        }
+    .dg-wrapper {
+        width: 100%;
+        height: auto;
+        color: #fff;
+        min-height: 0;
+    }
+
+        .dg-wrapper .descriptions-img-mb, .descriptions-container-mb {
+            width: 50%;
+            background: url('/home/images/hot-job/hot-job-bg.png'), linear-gradient(90deg, #0873D6 0%, #0835D6 100%);
+        }
+        .dg-wrapper .descriptions-img-mb {
+            border-bottom-left-radius: 16px;
+            border-top-left-radius: 16px;
+            min-height: 130px;
+        }
+        .dg-wrapper .descriptions-container-mb {
+            border-bottom-right-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+    .dg-wrapper .descriptions-img-mb img{
+        width: 100%;
+    }
+
+    .dg-wrapper .descriptions-container-mb{
+        padding: 3vw 3vw;
+        font-weight: 300;
+        position: relative;
+    }
+
+    .dg-wrapper .descriptions-container-mb a{
+        color: inherit;
+        font-weight: 300;
+        border: 1px solid;
+    }
+        .dg-wrapper .descriptions-container-mb .footer-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .dg-wrapper .descriptions-header-mb label {
+            font-weight: 500;
+            text-align: center;
+        }
+
+    .dg-wrapper .descriptions-header-mb hr{
+        border-top: 1px solid #fff;
+        margin: 5px 0;
+    }
+    .dg-wrapper .slick-dots{
+        display: flex;
+        margin: 2vw auto;
+        justify-content: center;
+        position: unset;
+    }
+
+    .dg-wrapper .slick-dots li button{
+        border-radius: 50%;
+        background-color: #005ba2;
+        font-size: 0;
+        border: none;
+        margin: 10px;
+        opacity: 0.5;
+    }
+    
+    .dg-wrapper .slick-dots li.slick-active button{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+
+    /*#hot-job input.btn-seeJob {
+        font-size: 3vw;
+    }*/
+
+    .slide-show {
+        margin: 0 20px;
+    }
+
+    .dg-wrapper .slick-dots li button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dg-wrapper .descriptions-header-mb label {
+        font-size: 32px;
+    }
+        .dg-wrapper .descriptions-container-mb .des-content-mb {
+            font-size: 20px;
+            max-height: 75%;
+            overflow: auto;
+        }
+
+    .dg-wrapper .descriptions-container-mb a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 376px){
+    .dg-wrapper .des-content-mb {
+        font-size: 18px;
+    }
+    .slide-show {
+        margin: 0 15px;
+    }
+
+    .dg-wrapper .slick-dots li button {
+        width: 15px;
+        height: 15px;
+    }
+
+    #hot-job input.btn-seeJob {
+        font-size: 3vw;
+    }
+
+    .dg-wrapper .descriptions-header-mb label {
+        font-size: 17px;
+    }
+
+    .dg-wrapper .descriptions-header-mb label hr{
+        margin: 5px 0;
+    }
+
+    .dg-wrapper .descriptions-container-mb {
+        font-size: 3.5vw;
+    }
+
+    .dg-wrapper .descriptions-container-mb p{
+        font-size: 16px;
+        font-family: sf-display-light;
+    }
+
+        .dg-wrapper .descriptions-container-mb a {
+            font-size: 2.5vw;
+            font-family: sf-display-light;
+        }
+}
+
+@media (max-width: 570px) {
+    .dg-wrapper .descriptions-header-mb label {
+        margin: 0;
+        line-height: 17px;
+    }
+    .dg-wrapper .descriptions-header-mb hr {
+        margin-top: 5px;
+    }
+    .dg-wrapper .descriptions-container-mb{
+        padding: 6px 6px;
+    }
+        .dg-wrapper .descriptions-container-mb .footer-btn {
+            bottom: 3px;
+        }
+}
+
+@media (max-width: 470px) {
+    .text-wrapper .descriptions-content-mb p{
+        font-size: 15px;
+    }
+    .dg-wrapper .descriptions-container-mb a {
+        padding: 3px 5px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .slide-show {
+        margin: 0 10px;
+    }
+
+    #hot-job input.btn-seeJob {
+        font-size: 3.5vw;
+    }
+
+    .dg-wrapper .descriptions-header-mb label {
+        font-size: 4vw;
+    }
+
+    .dg-wrapper .slick-dots li button {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dg-wrapper .descriptions-container-mb {
+        font-size: 3.5vw;
+    }
+
+    .dg-wrapper .descriptions-container-mb p {
+        font-size: 3.5vw;
+    }
+
+    .dg-wrapper .descriptions-container-mb a {
+        font-size: 11px;
+    }
+
+    .dg-wrapper .descriptions-header-mb label hr {
+        margin: 5px 0;
+    }
+}
