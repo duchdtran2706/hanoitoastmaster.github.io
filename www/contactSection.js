@@ -95,7 +95,7 @@ function initMap() {
         }
     };
     //var label = "Hanoi Toastmasters"
-    var location = { lat: 21.0221682, lng: 105.7783353 };
+    var location = { lat: 21.0221732, lng: 105.8138692 };
     // The map, centered at Uluru
     var map = new google.maps.Map(
         document.getElementById("map-section"), { zoom: 16, center: location });
