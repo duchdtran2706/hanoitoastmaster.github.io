@@ -24,7 +24,10 @@ $(document).ready(function () {
     changeLangImg(localStorage.getItem('lang'));
     $('#btn-register').click(function () {
         var lang = localStorage.getItem('lang') || 'vi-VN';
-        window.location.href = location.origin + "/" + lang + '/MyAccount/Register'
+        window.open(
+            'https://forms.gle/aJMWihsaMsZc9WKv5',
+            '_blank' 
+          );
     });
     /*if (window.location.href.includes(localStorage.getItem('lang')) == false) {
         if (window.location.href != window.location.origin + '/') {
