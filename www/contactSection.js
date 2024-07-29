@@ -94,8 +94,8 @@ function initMap() {
             lng: Number($(this).data('lng'))
         }
     };
-    //var label = "VTI BUILDING"
-    var location = { lat: 21.01484, lng: 105.78193 };
+    //var label = "Hanoi Toastmasters"
+    var location = { lat: 21.0221682, lng: 105.7783353 };
     // The map, centered at Uluru
     var map = new google.maps.Map(
         document.getElementById("map-section"), { zoom: 16, center: location });
@@ -113,7 +113,7 @@ function initMap() {
 function getInforAddressHtml() {
     // auto insert style when open infoWindow                      
     return `<div class='info-header'>
-              <span class="map-marker-title">VTI BUILDING</span>
+              <span class="map-marker-title">Hanoi Toastmasters</span>
             </div>`;
 }
 
