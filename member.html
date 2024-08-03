@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thông tin thành viên CLB Hanoi Toastmasters</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 4px 0;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 4px;
+            word-wrap: break-word;
+        }
+
+        th {
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            width: 100%;
+        }
+
+        tr,
+        td {
+            white-space: nowrap;
+        }
+
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thông tin thành viên CLB Hanoi Toastmasters</h1>
+    <div id="password-protect">
+        <h2>Nhập Member ID</h2>
+        <input type="text" id="member-id" />
+        <button onclick="checkMemberID()">Submit</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <div id="content">
+        <table id="data-table">
+            <thead>
+                <tr id="header-row">
+                    <th>STT</th>
+                    <th>Mã thành viên</th>
+                    <th>Thành viên từ</th>
+                    <th>Họ tên đầy đủ</th>
+                    <th>Chức năng</th>
+                    <th>Ngày sinh</th>
+                    <th>SĐT</th>
+                    <th>Địa chỉ email</th>
+                    <th>Địa chỉ thường trú ở Hà Nội</th>
+                    <th>Con đường/Pathway</th>
+                    <th>Nơi làm việc</th>
+                    <th>Vị trí, lĩnh vực công việc/Chuyên ngành tại trường </th>
+                    <th>Địa chỉ nhà theo hộ khẩu hoặc theo Chứng Minh Thư</th>
+                </tr>
+            </thead>
+            <tbody id="data-rows"></tbody>
+        </table>
+    </div>
+    <script>
+        let memberIDs = [];
+
+        async function fetchData() {
+            const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4YmtJRWRDVy_xcrwdTpHrncGHyzZYQzeIhfHDvztZdUmDCa_2IS7e_neKuGoX0xUEiYz10XnPH5rF/pubhtml');
+            const text = await response.text();
+            return text;
+        }
+
+        function extractTableData(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const table = doc.querySelector('table');
+            return table;
+        }
+
+        function displayData(table) {
+            const tableElement = document.getElementById('data-table');
+            const headerRow = document.getElementById('header-row');
+            const dataRows = document.getElementById('data-rows');
+
+            const rows = table.querySelectorAll('tbody tr');
+
+            // Hiển thị dữ liệu thành viên đang hoạt động
+            for (let i = 2; i < rows.length; i++) {
+                const tr = document.createElement('tr');
+                const cells = rows[i].querySelectorAll('td');
+                if (cells[0].textContent == '') {
+                    break;
+                }
+
+                // Lưu lại các Member ID
+                memberIDs.push(cells[1].textContent.trim());
+
+                cells.forEach((cell, index) => {
+                    if (index > 13 || index == 4) {
+                        return;
+                    }
+                    const td = document.createElement('td');
+                    td.textContent = cell.textContent;
+                    tr.appendChild(td);
+                });
+                dataRows.appendChild(tr);
+            }
+        }
+
+        function checkMemberID() {
+            const memberID = document.getElementById('member-id').value.trim();
+            const errorMessage = document.getElementById('error-message');
+            if (memberIDs.includes(memberID)) {
+                // Store the Member ID in session storage
+                sessionStorage.setItem('memberID', memberID);
+                displayContent();
+            } else {
+                errorMessage.textContent = "Member ID không đúng. Vui lòng thử lại.";
+            }
+        }
+
+        function displayContent() {
+            document.getElementById('password-protect').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        // Check session storage on page load
+        window.onload = function () {
+            const storedMemberID = sessionStorage.getItem('memberID');
+            if (storedMemberID && memberIDs.includes(storedMemberID)) {
+                displayContent();
+            }
+        };
+
+        fetchData().then(html => {
+            const table = extractTableData(html);
+            displayData(table);
+        });
+    </script>
+</body>
+
+</html>
