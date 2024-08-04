@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kịch bản sinh hoạt định kì <span id="shdk-number"></span></title>
+    <style type="text/css" media="print">
+        @page {
+            size: auto;
+            margin: 4mm;
+        }
+
+        @media print {
+            body {
+                visibility: hidden;
+            }
+
+            #print-area {
+                visibility: visible;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+    <style>
+        body {
+            padding: 8px 8px;
+        }
+
+        #title {
+            text-align: center;
+            color: #004165;
+        }
+
+
+        a:link {
+            color: #004165;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 10px;
+            line-height: normal;
+        }
+
+        .table {
+            border: 1px solid black;
+        }
+
+        .table-bordered>thead>tr>th,
+        .table-bordered>tbody>tr>th,
+        .table-bordered>tfoot>tr>th,
+        .table-bordered>thead>tr>td,
+        .table-bordered>tbody>tr>td,
+        .table-bordered>tfoot>tr>td {
+            border: 1px solid black;
+        }
+
+        .time {
+            width: 15%;
+        }
+
+        .content {
+            width: 60%;
+        }
+
+        .pic {
+            width: 25%;
+        }
+
+        lable {
+            font-weight: 700;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div id="print-area" class="col">
+            <h5 id="title"><b>KỊCH BẢN CHƯƠNG TRÌNH<br>SINH HOẠT ĐỊNH KỲ <span id="shdk-number"><br><span id="shdk-subject"></span></b></h5>
+            <table id="table" class="table table-sm table-bordered">
+                <tr>
+                    <td rowspan="4">
+                        <b>Chủ tịch</b> <br>Viết Chương<br><br>
+                        <b>Phó chủ tịch đào tạo (VPE)</b><br>Bích Ngọc<br><br>
+                        <b>Phó chủ tịch Thành viên (VPM)</b><br>Đình Đức<br><br>
+                        <b>Phó chủ tịch Quan hệ công chúng (VPPR) </b><br>Phùng Hiệp<br><br>
+                        <b>Thư ký (Secretary)</b><br>Xuân Thương<br><br>
+                        <b>Thủ quỹ (Treasurer)</b><br>Phạm Trang<br><br>
+                        <b>Hậu cần (SaA - Sergeant at Arms)</b><br>Ngọc Khánh
+                    </td>
+                    <td class="time"><b>Thời gian</b></td>
+                    <td class="content"><b>Nội dung</b></td>
+                    <td class="pic"><b>Phụ trách</b></td>
+                </tr>
+                <tr>
+                    <td class="time">18:55 - 19:05<br>(10&#39;)</td>
+                    <td class="content">Trò chơi khởi động</td>
+                    <td class="pic"><span id="shdk-gamer"> </span> </td>
+                </tr>
+                <tr>
+                    <td class="time" rowspan="2">18:55 - 19:05<br>(10&#39;)</td>
+                    <td class="content">Phát biểu mở đầu chương trình<br>Giới thiệu Toastmaster of the day</td>
+                    <td class="pic">Viết Chương</td>
+                </tr>
+                <tr>
+                    <td class="time">Giới thiệu các vị trí luân phiên:<br>
+                        - Topicmaster / Người phụ trách phần phản ứng nhanh: <span id="shdk-topicmaster"></span><br>
+                        ---------------<br>
+                        - Speaker 1 / Người thuyết trình 1: <span id="shdk-speaker1"></span><br>
+                        - Speaker 2 / Người thuyết trình 2: <span id="shdk-speaker2"></span><br>
+                        - Speaker 3 / Người thuyết trình 3: <span id="shdk-speaker3"></span><br>
+                        - Speaker 4 / Người thuyết trình 4: <span id="shdk-speaker4"></span> <br>
+                        -----------------<br>
+                        - Timer / Người kiểm soát thời gian: <span id="shdk-timer"><br>
+                        - Ah-Counter / Người đếm từ thừa: <span id="shdk-ahcounter"><br>
+                        - Grammarian / Người sửa lỗi ngữ pháp: <span id="shdk-grammarian"><br>
+                    </td>
+                    <td class="pic">
+                        ToD: <span id="shdk-tod"><br>
+                        Timer: <span id="shdk-timer"><br>
+                        AhCounter: <span id="shdk-ahcounter"><br>
+                        Grammarian: <span id="shdk-grammarian"><br>
+                        S1-E1: <span id="shdk-speaker1"> - <span id="shdk-eva1"><br>
+                        S2-E2: <span id="shdk-speaker2"> - <span id="shdk-eva2"><br>
+                        S3-E3: <span id="shdk-speaker3"> - <span id="shdk-eva3"><br>
+                        S4-E4: <span id="shdk-speaker4"> - <span id="shdk-eva4"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Hanoi Toastmasters <br>
+                            Sinh hoạt vào thứ 5, tuần thứ 1 và thứ 3 hàng tháng<br>
+                            Từ 19h đến 21h30</b>
+                    </td>
+                    <td class="time">19:10 - 19:45<br>(35&#39;)</td>
+                    <td class="content">Thuyết trình chuẩn bị trước<br>
+                        - Thuyết trình 1: Dự án 1 level 3, Con đường: Thuyết phục tạo ảnh hưởng, Tên dự án: Hiểu về cách
+                        xử lí xung đột<br>
+                        Tên bài nói: Xung đột - Có thể bạn chưa biết<br> <br>
+                        -Thuyết trình 2: Dự án 1 level 1, Con đường: Phát triển khả năng lãnh đạo, Tên dự án: Phá băng
+                        <br>
+                        Tên bài nói: Hành trình phá băng đầu tiên tại Toastmaster<br> <br>
+                        - Thuyết trình 3: Dự án 3 level 1, Con đường: Thuyết phục ảnh hưởng, Tên dự án: Sử dụng giọng
+                        nói và ngôn ngữ <br>
+                        Tên bài nói: Đa mục tiêu liệu có tốt?<br> <br>
+                        - Thuyết trình 4: Dự án 1 level 1, Con đường: Lãnh đạo thuyết phục tạo ảnh hưởng, Tên dự án: Phá
+                        băng <br>
+                        Tên bài nói: Bài nói gây ấn tượng hay dài dòng?<br> <br>
+                        - Đánh giá về thời gian, từ thừa và ngữ pháp<br>
+                        - Bình chọn Bài thuyết trình được yêu thích
+                    </td>
+                    <td class="pic">
+                        Ban đánh giá: <br>
+                        Timer: <span id="shdk-timer"><br>
+                        Ahcounter: <span id="shdk-speaker1"><br>
+                        Grammarian: <span id="shdk-speaker1"><br>
+                        Khán giả
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><b>Sứ mệnh của CLB</b> <br>
+                        Chúng tôi cung cấp trải nghiệm học tập chung tích cực và khích lệ mà ở đó, mỗi thành viên có cơ
+                        hội phát triển kĩ năng giao tiếp, kĩ năng lãnh đạo, từ đó thúc đẩy sự tự tin và sự trưởng thành
+                        của mỗi hội viên. </td>
+                    <td class="time">19:45 - 19:55<br>(10&#39;)</td>
+                    <td class="content">Teabreak</td>
+                    <td class="pic"></td>
+
+                </tr>
+                <tr>
+                    <td class="time">19:55 - 20:00<br>(5&#39;)</td>
+                    <td class="content">VPM giao lưu khách mời</td>
+                    <td class="pic">Trần Đình Đức</td>
+                </tr>
+                <tr>
+                    <td class="time">20:00 - 20:30<br>(30.5&#39;)</td>
+                    <td class="content">Đánh giá phần thuyết trình chuẩn bị trước<br>
+                        - Đánh giá phần thuyết trình 1: <span id="shdk-eva1"><br>
+                        - Đánh giá phần thuyết trình 2: <span id="shdk-eva2"><br>
+                        - Đánh giá phần thuyết trình 3: <span id="shdk-eva3"><br>
+                        - Đánh giá phần thuyết trình 4: <span id="shdk-eva4"><br>
+                        - Đánh giá thời gian, từ thừa và ngữ pháp<br>
+                        - Bình chọn Bài đánh giá được yêu thích</td>
+                    <td class="pic">Ban đánh giá:
+                        <br>Timer: <span id="shdk-timer"><br>
+                        Ahcounter: <span id="shdk-ahcounter"><br>
+                        Grammarian:<span id="shdk-grammarian"><br>
+                        Khán giả
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Fan Page của CLB:</b><br><a
+                            href="https://www.fb.com/hanoi.toastmasters.club/">https://fb.com/hanoi.toastmasters.club/</a>
+                    </td>
+                    <td class="time">20:30 - 20:40<br>(10&#39;)</td>
+                    <td class="content"> Nghỉ giải lao / Hoạt động kết nối</td>
+                    <td class="pic"></td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img src="qr.jpeg" width="100%" /></td>
+                    <td>20:40 - 21:08<br>(28&#39;)</td>
+                    <td>Phản ứng nhanh (Table Topic) <br>
+                        - Topicmaster đưa ra câu hỏi : <span id="shdk-topicmaster"><br>
+                        - Các speakers trả lời <br>
+                        - Đánh giá về thời gian<br>
+                        - Bình chọn Bài trả lời phản ứng nhanh được yêu thích
+                    </td>
+                    <td class="pic">Ban đánh giá:
+                        <br>Timer: <span id="shdk-timer"><br>
+                        Ahcounter: <span id="shdk-ahcounter"><br>
+                        Grammarian:<span id="shdk-grammarian"><br>
+                        Khán giả
+                    </td>
+                </tr>
+                <tr>
+                    <td class="time">21:08 - 21:13<br>(5&#39;)</td>
+                    <td class="content">Người đánh giá tổng quan GE</td>
+                    <td class="pic"><span id="shdk-ge"></td>
+                </tr>
+                <tr>
+                    <td class="time">21:13 - 21:18<br>(5&#39;)</td>
+                    <td class="content">VPM giao lưu khách mời </td>
+                    <td class="pic">Trần Đình Đức</td>
+                </tr>
+                <tr>
+                    <td class="time">21:18 - 21:27<br>(9&#39;)</td>
+                    <td class="content">Tổng kết: <br>- Người đánh giá tổng quan nhận xét<br>- Trao Bằng chứng nhận</td>
+                    <td class="pic">ToD: <span id="shdk-tod"><br>Chủ tích: Viết Chương</td>
+                </tr>
+                <tr>
+                    <td class="time">21:27 - 21:30<br>(3&#39;)</td>
+                    <td class="content">Kết thúc, chụp ảnh, giao lưu thành viên và khách mời tự do</td>
+                    <td class="pic"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col pl-2">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h5 class="card-title">Sinh hoạt định kì</h5>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="fw-bold">Sinh hoạt định kì số</label>
+                            <select class="form-control form-control-sm" id="select-number" onchange="onSHDKChanged()">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-subject">Chủ đề</label>
+                            <input type="text" class="form-control form-control-sm" id="input-subject"
+                                onkeydown="onSubjectChanged()">
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-tod">Điều phối chương trình - Toastmasters of
+                                the Day (ToD)</label>
+                            <input type="text" class="form-control  form-control-sm" id="input-tod">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-gamer">Quản trò</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-gamer">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-timer">Quản lí thời gian - Timer</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-timer">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-ahcounter">Đếm từ thừa - Ah Counter</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-ahcounter">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-grammarian">Soát lỗi ngữ pháp -
+                                    Grammarian</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-grammarian">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-topicmaster">Điều phối Phản ứng nhanh -
+                                    Topicmaster</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-topicmaster">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-evatopicmaster">Đánh giá phản ứng nhanh</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-evatopicmaster">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-ge">Đánh giá tổng quát - General Evaluator
+                                (GE)</label>
+                            <input type="text" class="form-control  form-control-sm" id="input-ge">
+                        </div>
+
+                        <!-- Người nói 1 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker1">Người nói 1</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker1">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva1">Người đánh giá 1</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project-1">Dự án</label>
+                            <textarea id="input-project-1" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speaker-name-1">Tên bài nói</label>
+                            <textarea id="input-speaker-name-1" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 2 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker2">Người nói 2</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker2">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva2">Người đánh giá 2</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Dự án</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Tên bài nói</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 3 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker3">Người nói 3</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker3">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva3">Người đánh giá 3</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva3">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Dự án</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Tên bài nói</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 4 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker4">Người nói 4</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker4">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva4">Người đánh giá 4</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Dự án</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="exampleInputPassword1">Tên bài nói</label>
+                            <textarea id="exampleInputPassword1" class="form-control" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-primary" onclick="window.print()">In kịch
+                            bản</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="shdk.js"></script>
+
+<script>
+    window.onload = async function () {
+        await getAllSHDK();
+
+        $.each(shdks, function (i, item) {
+            $('#select-number').append($('<option>', {
+                value: JSON.stringify(item),
+                text: `${item.shdk}: ${item.time}`,
+            }));
+        });
+
+        onSHDKChanged();
+    };
+
+    function onSHDKChanged() {
+        let shdk = JSON.parse($('#select-number').val());
+
+        $('#shdk-number').toArray().forEach(element => {
+            element.textContent = shdk.shdk.slice(5);
+        });
+
+        onSubjectChanged(shdk.subject);
+        onToDChanged(shdk.tod);
+        onGamerChanged(shdk.gamer);
+        onTimerChanged(shdk.timer);
+        onAhCounterChanged(shdk.ahcounter);
+        onGrammarianChanged(shdk.grammarian);
+        onTopicmasterChanged(shdk.topicmaster);
+        onEvaTopicmasterChanged(shdk.evatopicmaster);
+        onGEChanged(shdk.ge);
+        onSpeaker1Changed(shdk.speaker1);
+        onEva1Changed(shdk.eva1);
+        onSpeaker2Changed(shdk.speaker2);
+        onEva2Changed(shdk.eva2);
+        onSpeaker3Changed(shdk.speaker3);
+        onEva3Changed(shdk.eva3);
+        onSpeaker4Changed(shdk.speaker4);
+        onEva4Changed(shdk.eva4);
+    }
+
+    function onSubjectChanged(val) {
+        if(val) {
+            $('#input-subject').val(val);
+        }
+        $('#shdk-subject').toArray().forEach(element => {
+            element.textContent = $('#input-subject').val();
+        });
+    }
+
+    function onToDChanged(val) {
+        if(val) {
+            $('#input-tod').val(val);
+        }
+        $('#shdk-tod').toArray().forEach(element => {
+            element.textContent = $('#input-tod').val();
+        });
+    }
+
+    function onGamerChanged(val) {
+        if(val) {
+            $('#input-gamer').val(val);
+        }
+        $('#shdk-gamer').toArray().forEach(element => {
+            element.textContent = $('#input-gamer').val();
+        });
+    }
+
+    function onTimerChanged(val) {
+        if(val) {
+            $('#input-timer').val(val);
+        }
+        $('#shdk-timer').toArray().forEach(element => {
+            element.textContent = $('#input-timer').val();
+        });
+    }
+    
+    function onAhCounterChanged(val) {
+        if(val) {
+            $('#input-ahcounter').val(val);
+        }
+        $('#shdk-ahcounter').toArray().forEach(element => {
+            element.textContent = $('#input-ahcounter').val();
+        });
+    }
+
+    function onGrammarianChanged(val) {
+        if(val) {
+            $('#input-grammarian').val(val);
+        }
+        $('#shdk-grammarian').toArray().forEach(element => {
+            element.textContent = $('#input-grammarian').val();
+        });
+    }
+
+    function onTopicmasterChanged(val) {
+        if(val) {
+            $('#input-topicmaster').val(val);
+        }
+        $('#shdk-topicmaster').toArray().forEach(element => {
+            element.textContent = $('#input-topicmaster').val();
+        });
+    }
+
+    function onEvaTopicmasterChanged(val) {
+        if(val) {
+            $('#input-evatopicmaster').val(val);
+        }
+        $('#shdk-evatopicmaster').toArray().forEach(element => {
+            element.textContent = $('#input-evatopicmaster').val();
+        });
+    }
+
+    function onGEChanged(val) {
+        if(val) {
+            $('#input-ge').val(val);
+        }
+        $('#shdk-ge').toArray().forEach(element => {
+            element.textContent = $('#input-ge').val();
+        });
+    }
+
+    function onSpeaker1Changed(val) {
+        if(val) {
+            $('#input-speaker1').val(val);
+        }
+        $('#shdk-speaker1').toArray().forEach(element => {
+            element.textContent = $('#input-speaker1').val();
+        });
+    }
+
+    function onEva1Changed(val) {
+        if(val) {
+            $('#input-eva1').val(val);
+        }
+        $('#shdk-eva1').toArray().forEach(element => {
+            element.textContent = $('#input-eva1').val();
+        });
+    }
+
+    function onSpeaker2Changed(val) {
+        if(val) {
+            $('#input-speaker2').val(val);
+        }
+        $('#shdk-speaker2').toArray().forEach(element => {
+            element.textContent = $('#input-speaker2').val();
+        });
+    }
+
+    function onEva2Changed(val) {
+        if(val) {
+            $('#input-eva2').val(val);
+        }
+        $('#shdk-eva2').toArray().forEach(element => {
+            element.textContent = $('#input-eva2').val();
+        });
+    }
+
+
+    function onSpeaker3Changed(val) {
+        if(val) {
+            $('#input-speaker3').val(val);
+        }
+        $('#shdk-speaker3').toArray().forEach(element => {
+            element.textContent = $('#input-speaker3').val();
+        });
+    }
+
+    function onEva3Changed(val) {
+        if(val) {
+            $('#input-eva3').val(val);
+        }
+        $('#shdk-eva3').toArray().forEach(element => {
+            element.textContent = $('#input-eva3').val();
+        });
+    }
+
+
+    function onSpeaker4Changed(val) {
+        if(val) {
+            $('#input-speaker4').val(val);
+        }
+        $('#shdk-speaker4').toArray().forEach(element => {
+            element.textContent = $('#input-speaker4').val();
+        });
+    }
+
+    function onEva4Changed(val) {
+        if(val) {
+            $('#input-eva4').val(val);
+        }
+        $('#shdk-eva4').toArray().forEach(element => {
+            element.textContent = $('#input-eva4').val();
+        });
+    }
+</script>
