@@ -460,7 +460,7 @@
             const savedValue = localStorage.getItem(id.substring(6));
             if (savedValue) {
                 const inputElement = document.getElementById(id);
-                if (inputElement) {
+                if (inputElement && !inputElement.value) {
                     console.log(`Restoring ${id} with value: ${savedValue}`);
                     inputElement.value = savedValue;
                     onchangeHandlers[id](savedValue); // Gọi hàm để cập nhật giao diện
