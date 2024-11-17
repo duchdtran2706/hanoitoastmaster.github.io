@@ -21,26 +21,27 @@ async function getAllSHDK() {
     const shdkNumbers = rows[1].querySelectorAll('td');
     const times = rows[2].querySelectorAll('td');
     const subjects = rows[3].querySelectorAll('td');
-    const tods = rows[5].querySelectorAll('td');
-    const speaker1 = rows[6].querySelectorAll('td');
-    const eva1 = rows[7].querySelectorAll('td');
-    const speaker2 = rows[8].querySelectorAll('td');
-    const eva2 = rows[9].querySelectorAll('td');
-    const speaker3 = rows[10].querySelectorAll('td');
-    const eva3 = rows[11].querySelectorAll('td');
-    const speaker4 = rows[12].querySelectorAll('td');
-    const eva4 = rows[13].querySelectorAll('td');
-    const speaker5 = rows[14].querySelectorAll('td');
-    const eva5 = rows[15].querySelectorAll('td');
-    const speaker6 = rows[16].querySelectorAll('td');
-    const eva6 = rows[17].querySelectorAll('td');
-    const ges = rows[18].querySelectorAll('td');
-    const timers = rows[19].querySelectorAll('td');
-    const ahcounters = rows[20].querySelectorAll('td');
-    const grammarians = rows[21].querySelectorAll('td');
-    const topicmasters = rows[22].querySelectorAll('td');
-    const evatopicmasters = rows[24].querySelectorAll('td');
-    const gamers = rows[25].querySelectorAll('td');
+    const tods = rows[6].querySelectorAll('td');
+    const speaker1 = rows[7].querySelectorAll('td');
+    const eva1 = rows[8].querySelectorAll('td');
+    const speaker2 = rows[9].querySelectorAll('td');
+    const eva2 = rows[10].querySelectorAll('td');
+    const speaker3 = rows[11].querySelectorAll('td');
+    const eva3 = rows[12].querySelectorAll('td');
+    const speaker4 = rows[13].querySelectorAll('td');
+    const eva4 = rows[14].querySelectorAll('td');
+    const speaker5 = rows[15].querySelectorAll('td');
+    const eva5 = rows[16].querySelectorAll('td');
+    const speaker6 = rows[17].querySelectorAll('td');
+    const eva6 = rows[18].querySelectorAll('td');
+    const ges = rows[19].querySelectorAll('td');
+    const timers = rows[20].querySelectorAll('td');
+    const ahcounters = rows[21].querySelectorAll('td');
+    const grammarians = rows[22].querySelectorAll('td');
+    const topicmasters = rows[23].querySelectorAll('td');
+    const evatopicmasters = rows[25].querySelectorAll('td');
+    const gamers = rows[26].querySelectorAll('td');
+    
 
 
     shdkNumbers.forEach((shdk, index) => { 

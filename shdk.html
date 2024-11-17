@@ -220,9 +220,9 @@
                         - Bình chọn Bài trả lời phản ứng nhanh được yêu thích
                     </td>
                     <td class="pic">
-                        ToD: <span id="shdk-tod"></span><br>
                         Ban đánh giá:
-                        <br>Timer: <span id="shdk-timer"></span><br/>
+                        <br>Timer: <span id="shdk-timer"></span>
+                        <br>Đánh giá PƯN: <span id="shdk-evatopicmaster"></span><br/>
                         Khán giả
                     </td>
                 </tr>
@@ -250,8 +250,9 @@
         </div>
         <div class="col pl-2">
             <div class="card card-primary">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title">Sinh hoạt định kì</h5>
+                    <button class="btn btn-sm btn-primary" onclick="onSHDKChanged()">Làm mới</button>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -574,7 +575,7 @@
         if (val) {
             $('#input-topicmaster').val(val);
         }
-        $('#shdk-topicmaster').toArray().forEach(element => {
+        $('[id=shdk-topicmaster]').toArray().forEach(element => {
             element.textContent = $('#input-topicmaster').val();
         });
         localStorage.setItem('topicmaster', $('#input-topicmaster').val());
