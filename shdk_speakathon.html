@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kịch bản sinh hoạt định kì <span id="shdk-number"></span></title>
+    <style type="text/css" media="print">
+        @page {
+            size: auto;
+            margin: 4mm;
+        }
+
+        @media print {
+            body {
+                visibility: hidden;
+            }
+
+            #print-area {
+                visibility: visible;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+    <style>
+        body {
+            padding: 8px 8px;
+        }
+
+        #title {
+            text-align: center;
+            color: #004165;
+        }
+
+
+        a:link {
+            color: #004165;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 10px;
+            line-height: normal;
+        }
+
+        .table {
+            border: 1px solid black;
+        }
+
+        .table-bordered>thead>tr>th,
+        .table-bordered>tbody>tr>th,
+        .table-bordered>tfoot>tr>th,
+        .table-bordered>thead>tr>td,
+        .table-bordered>tbody>tr>td,
+        .table-bordered>tfoot>tr>td {
+            border: 1px solid black;
+        }
+
+        .time {
+            width: 15%;
+        }
+
+        .content {
+            width: 60%;
+        }
+
+        .pic {
+            width: 25%;
+        }
+
+        lable {
+            font-weight: 700;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div id="print-area" class="col">
+            <h5 id="title"><b>KỊCH BẢN CHƯƠNG TRÌNH<br>SINH HOẠT ĐỊNH KỲ <span id="shdk-number"></span><br><span
+                        id="shdk-subject"></span></b></h5>
+            <table id="table" class="table table-sm table-bordered">
+                <tr>
+                    <td rowspan="4">
+                        <img src="www/logo_toastmasters.png" width="64"/>
+                        <img src="www/logo_hanoitoastmasters.jpg" width="48" style="border-radius: 2px"/> <br/><br/>
+                        <h6>Hanoi Toastmasters</h6>
+                            Sinh hoạt vào thứ 5, tuần thứ 1 và thứ 3 hàng tháng<br>
+                            Từ 19h đến 21h30<br/>
+                            Địa chỉ: Nova 4, 22 Thành Công, Ba Đình, Hà Nội
+                    </td>
+                    <td class="time"><b>Thời gian</b></td>
+                    <td class="content"><b>Nội dung</b></td>
+                    <td class="pic"><b>Phụ trách</b></td>
+                </tr>
+                <tr>
+                    <td class="time">19:00 - 19:10<br>(10&#39;)</td>
+                    <td class="content">Trò chơi khởi động</td>
+                    <td class="pic"><span id="shdk-gamer"> </span> </td>
+                </tr>
+                <tr>
+                    <td class="time" rowspan="2">19:10 - 19:20<br>(10&#39;)</td>
+                    <td class="content">Phát biểu mở đầu chương trình<br>Giới thiệu Toastmaster of the day</td>
+                    <td class="pic">Trần Thuý</td>
+                </tr>
+                <tr>
+                    <td class="time">Giới thiệu các vị trí luân phiên:<br>
+                        ---------------<br>
+                        - Speaker 1 / Người thuyết trình 1: <span id="shdk-speaker1"></span><br>
+                        - Speaker 2 / Người thuyết trình 2: <span id="shdk-speaker2"></span><br>
+                        - Speaker 3 / Người thuyết trình 3: <span id="shdk-speaker3"></span><br>
+                        - Speaker 4 / Người thuyết trình 4: <span id="shdk-speaker4"></span> <br>
+                        - Speaker 5 / Người thuyết trình 5: <span id="shdk-speaker5"></span> <br>
+                        - Speaker 6 / Người thuyết trình 6: <span id="shdk-speaker6"></span> <br>
+                        -----------------<br>
+                        - Timer / Người kiểm soát thời gian: <span id="shdk-timer"></span><br>
+                        - Ah-Counter / Người đếm từ thừa: <span id="shdk-ahcounter"></span><br>
+                        - Grammarian / Người sửa lỗi ngữ pháp: <span id="shdk-grammarian"></span><br>
+                    </td>
+                    <td class="pic">
+                        ToD: <span id="shdk-tod"></span><br>
+                        Timer: <span id="shdk-timer"></span><br>
+                        AhCounter: <span id="shdk-ahcounter"></span><br>
+                        Grammarian: <span id="shdk-grammarian"></span><br>
+                        S1-E1: <span id="shdk-speaker1"></span> - <span id="shdk-eva1"></span><br>
+                        S2-E2: <span id="shdk-speaker2"></span> - <span id="shdk-eva2"></span><br>
+                        S3-E3: <span id="shdk-speaker3"></span> - <span id="shdk-eva3"></span><br>
+                        S4-E4: <span id="shdk-speaker4"></span> - <span id="shdk-eva4"></span><br>
+                        S5-E5: <span id="shdk-speaker5"></span> - <span id="shdk-eva5"></span><br>
+                        S6-E6: <span id="shdk-speaker6"></span> - <span id="shdk-eva6"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                            <b>Chủ tịch</b> <br>Trần Thuý<br><br>
+                            <b>Phó chủ tịch đào tạo (VPE)</b><br>Quỳnh Chi<br><br>
+                            <b>Phó chủ tịch Thành viên (VPM)</b><br>Xuân Phương<br><br>
+                            <b>Phó chủ tịch Quan hệ công chúng (VPPR) </b><br>Thu Hiền<br><br>
+                            <b>Thư ký (Secretary)</b><br>Hoà Vũ<br><br>
+                            <b>Thủ quỹ (Treasurer)</b><br>Viết Chương<br><br>
+                            <b>Hậu cần (SaA - Sergeant at Arms)</b><br>Mai Lan
+                    </td>
+                    <td class="time">19:20 - 19:52<br>(32&#39;)</td>
+                    <td class="content">Thuyết trình chuẩn bị  - Chặng 1<br><br>
+                        - Thuyết trình 1: <span id="shdk-project1"></span><br>
+                        Tên bài nói: <span id="shdk-speakname1"></span><br> <br>
+                        -Thuyết trình 2: <span id="shdk-project2"></span><br>
+                        Tên bài nói: <span id="shdk-speakname2"></span><br> <br>
+                        - Thuyết trình 3: <span id="shdk-project3"></span><br>
+                        Tên bài nói: <span id="shdk-speakname3"></span><br> <br>
+                        - Đánh giá về thời gian, từ thừa và ngữ pháp<br>
+                        - Bình chọn Bài thuyết trình được yêu thích
+                    </td>
+                    <td class="pic">
+                        ToD: <span id="shdk-tod"></span><br>
+                        Ban đánh giá: <br>
+                        Timer: <span id="shdk-timer"></span><br>
+                        Ahcounter: <span id="shdk-ahcounter"></span><br>
+                        Grammarian: <span id="shdk-grammarian"></span><br>
+                        Khán giả
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><b>Sứ mệnh của CLB</b> <br>
+                        Chúng tôi cung cấp trải nghiệm học tập chung tích cực và khích lệ mà ở đó, mỗi thành viên có cơ
+                        hội phát triển kĩ năng giao tiếp, kĩ năng lãnh đạo, từ đó thúc đẩy sự tự tin và sự trưởng thành
+                        của mỗi hội viên. </td>
+                        <td class="time">19:52 - 20:02<br>(10&#39;)</td>
+                    <td class="content">Teabreak</td>
+                    <td class="pic"></td>
+
+                </tr>
+                <tr>
+                    <td class="time">20:02 - 20:07<br>(5&#39;)</td>
+                    <td class="content">VPM giao lưu khách mời</td>
+                    <td class="pic">Xuân Phương</td>
+                </tr>
+                <tr>
+                    <td class="time">20:07 - 20:39<br>(32&#39;)</td>
+                    <td class="content">Thuyết trình chuẩn bị  - Chặng 2<br><br>
+                        - Thuyết trình 4: <span id="shdk-project4"></span><br>
+                        Tên bài nói: <span id="shdk-speakname4"></span><br> <br>
+                        -Thuyết trình 5: <span id="shdk-project5"></span><br>
+                        Tên bài nói: <span id="shdk-speakname5"></span><br> <br>
+                        - Thuyết trình 6: <span id="shdk-project6"></span><br>
+                        Tên bài nói: <span id="shdk-speakname6"></span><br> <br>
+                        - Đánh giá về thời gian, từ thừa và ngữ pháp<br>
+                        - Bình chọn Bài thuyết trình được yêu thích
+                    </td>
+                    <td class="pic">
+                        ToD: <span id="shdk-tod"></span><br>
+                        Ban đánh giá: <br>
+                        Timer: <span id="shdk-timer"></span><br>
+                        Ahcounter: <span id="shdk-ahcounter"></span><br>
+                        Grammarian: <span id="shdk-grammarian"></span><br>
+                        Khán giả
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Fan Page của CLB:</b><br><a
+                            href="https://www.fb.com/hanoi.toastmasters.club/">https://fb.com/hanoi.toastmasters.club/</a>
+                    </td>
+                    <td class="time">20:39 - 20:44<br>(5&#39;)</td>
+                    <td class="content"> Nghỉ giải lao / Hoạt động kết nối</td>
+                    <td class="pic"></td>
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <b>Phí khách mời 50k xin bạn chuyển khoản vào tài khoản dưới đây</b>
+                        <img src="qr.jpg" width="100%" /></td>
+                    <td>20:44 - 21:20<br>(36.5&#39;)</td>
+                    <td class="content">Đánh giá phần thuyết trình chuẩn bị trước<br><br>
+                        - Đánh giá phần thuyết trình 1: <span id="shdk-eva1"></span><br>
+                        - Đánh giá phần thuyết trình 2: <span id="shdk-eva2"></span><br>
+                        - Đánh giá phần thuyết trình 3: <span id="shdk-eva3"></span><br>
+                        - Đánh giá phần thuyết trình 4: <span id="shdk-eva4"></span><br>
+                        - Đánh giá phần thuyết trình 5: <span id="shdk-eva5"></span><br>
+                        - Đánh giá phần thuyết trình 6: <span id="shdk-eva6"></span><br><br>
+                        - Đánh giá thời gian, từ thừa và ngữ pháp<br>
+                        - Bình chọn Bài đánh giá được yêu thích</td>
+                    <td class="pic">
+                        ToD: <span id="shdk-tod"></span><br>
+                        Ban đánh giá:
+                        <br>Timer: <span id="shdk-timer"></span><br>
+                        Ahcounter: <span id="shdk-ahcounter"></span><br>
+                        Grammarian:<span id="shdk-grammarian"></span><br>
+                        Khán giả
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="time">21:20 - 21:27<br>(7&#39;)</td>
+                    <td class="content">Tổng kết: <br>- Trao Bằng chứng nhận</td>
+                    <td class="pic">ToD: <span id="shdk-tod"></span><br>Chủ tích: Trần Thuý</td>
+                </tr>
+                <tr>
+                    <td class="time">21:27 - 21:30<br>(3&#39;)</td>
+                    <td class="content">Kết thúc, chụp ảnh, giao lưu thành viên và khách mời tự do</td>
+                    <td class="pic"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col pl-2">
+            <div class="card card-primary">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title">Sinh hoạt định kì</h5>
+                    <button class="btn btn-sm btn-primary" onclick="onSHDKChanged()">Làm mới</button>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="fw-bold">Sinh hoạt định kì số</label>
+                            <select class="form-control form-control-sm" id="select-number" onchange="onSHDKChanged()">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-subject">Chủ đề</label>
+                            <input type="text" class="form-control form-control-sm" id="input-subject"
+                                onkeydown="onSubjectChanged()">
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-tod">Điều phối chương trình - Toastmasters of
+                                the Day (ToD)</label>
+                            <input type="text" class="form-control  form-control-sm" id="input-tod">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-gamer">Quản trò</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-gamer">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-timer">Quản lí thời gian - Timer</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-timer">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-ahcounter">Đếm từ thừa - Ah Counter</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-ahcounter">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-grammarian">Soát lỗi ngữ pháp -
+                                    Grammarian</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-grammarian">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-topicmaster">Điều phối Phản ứng nhanh -
+                                    Topicmaster</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-topicmaster">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-evatopicmaster">Đánh giá phản ứng nhanh</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-evatopicmaster">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-ge">Đánh giá tổng quát - General Evaluator
+                                (GE)</label>
+                            <input type="text" class="form-control  form-control-sm" id="input-ge">
+                        </div>
+
+                        <!-- Người nói 1 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker1">Người nói 1</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker1">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva1">Người đánh giá 1</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project1">Dự án</label>
+                            <textarea id="input-project1" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname1">Tên bài nói</label>
+                            <textarea id="input-speakname1" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 2 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker2">Người nói 2</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker2">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva2">Người đánh giá 2</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project2">Dự án</label>
+                            <textarea id="input-project2" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname2">Tên bài nói</label>
+                            <textarea id="input-speakname2" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 3 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker3">Người nói 3</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker3">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva3">Người đánh giá 3</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva3">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project3">Dự án</label>
+                            <textarea id="input-project3" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname3">Tên bài nói</label>
+                            <textarea id="input-speakname3" class="form-control" rows="1"></textarea>
+                        </div>
+
+                        <!-- Người nói 4 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker4">Người nói 4</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker4">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva4">Người đánh giá 4</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project4">Dự án</label>
+                            <textarea id="input-project4" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname4">Tên bài nói</label>
+                            <textarea id="input-speakname4" class="form-control" rows="1"></textarea>
+                        </div>
+                         <!-- Người nói 5 -->
+                         <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker5">Người nói 5</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker5">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva5">Người đánh giá 5</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project5">Dự án</label>
+                            <textarea id="input-project5" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname5">Tên bài nói</label>
+                            <textarea id="input-speakname5" class="form-control" rows="1"></textarea>
+                        </div>
+                        <!-- Người nói 6 -->
+                        <div class="row">
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-speaker6">Người nói 6</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-speaker6">
+                            </div>
+                            <div class="form-group col">
+                                <label class="fw-bold" for="input-eva6">Người đánh giá 6</label>
+                                <input type="text" class="form-control  form-control-sm" id="input-eva6">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-project6">Dự án</label>
+                            <textarea id="input-project6" class="form-control" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="fw-bold" for="input-speakname6">Tên bài nói</label>
+                            <textarea id="input-speakname6" class="form-control" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-primary" onclick="window.print()">In kịch
+                            bản</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="shdk.js"></script>
+
+<script>
+    window.onload = async function () {
+        // Danh sách các hàm onchange tương ứng với các input
+        const onchangeHandlers = {
+            'input-subject': onSubjectChanged,
+            'input-tod': onToDChanged,
+            'input-gamer': onGamerChanged,
+            'input-timer': onTimerChanged,
+            'input-ahcounter': onAhCounterChanged,
+            'input-grammarian': onGrammarianChanged,
+            'input-topicmaster': onTopicmasterChanged,
+            'input-evatopicmaster': onEvaTopicmasterChanged,
+            'input-ge': onGEChanged,
+            'input-speaker1': onSpeaker1Changed,
+            'input-eva1': onEva1Changed,
+            'input-project1': onProject1Changed,
+            'input-speakname1': onSpeakName1Changed,
+            'input-speaker2': onSpeaker2Changed,
+            'input-eva2': onEva2Changed,
+            'input-project2': onProject2Changed,
+            'input-speakname2': onSpeakName2Changed,
+            'input-speaker3': onSpeaker3Changed,
+            'input-eva3': onEva3Changed,
+            'input-project3': onProject3Changed,
+            'input-speakname3': onSpeakName3Changed,
+            'input-speaker4': onSpeaker4Changed,
+            'input-eva4': onEva4Changed,
+            'input-project4': onProject4Changed,
+            'input-speakname4': onSpeakName4Changed,
+            'input-speaker5': onSpeaker5Changed,
+            'input-eva5': onEva5Changed,
+            'input-project5': onProject5Changed,
+            'input-speakname5': onSpeakName5Changed,
+            'input-speaker6': onSpeaker6Changed,
+            'input-eva6': onEva6Changed,
+            'input-project6': onProject6Changed,
+            'input-speakname6': onSpeakName6Changed
+        };
+
+        // Thêm sự kiện onchange cho từng input
+        for (const id in onchangeHandlers) {
+            const inputElement = document.getElementById(id);
+            if (inputElement) {
+                inputElement.addEventListener('change', function () {
+                    console.log(`Saving ${id} with value: ${this.value}`);
+                    onchangeHandlers[id](this.value);
+                });
+            }
+        }
+
+        // Khôi phục dữ liệu từ LocalStorage
+        for (const id in onchangeHandlers) {
+            console.log(localStorage.getItem(id.substring(6)));
+            const savedValue = localStorage.getItem(id.substring(6));
+            if (savedValue) {
+                const inputElement = document.getElementById(id);
+                if (inputElement && !inputElement.value) {
+                    console.log(`Restoring ${id} with value: ${savedValue}`);
+                    inputElement.value = savedValue;
+                    onchangeHandlers[id](savedValue); // Gọi hàm để cập nhật giao diện
+                }
+            }
+        }
+
+        await getAllSHDK();
+
+        // Tìm SHDK gần nhất
+        const closestSHDK = findClosestSHDK();
+
+        $.each(shdks, function (i, item) {
+            $('#select-number').append($('<option>', {
+                value: JSON.stringify(item),
+                text: `${item.shdk}: ${changeDateFormat(item.time)}`,
+                selected: item.shdk === closestSHDK.shdk // Tự động chọn SHDK gần nhất
+            }));
+        });
+
+        onSHDKChanged();
+    };
+
+    function onSHDKChanged() {
+        let shdk = JSON.parse($('#select-number').val());
+
+        $('#shdk-number').toArray().forEach(element => {
+            element.textContent = shdk.shdk.slice(5);
+        });
+
+        onSubjectChanged(shdk.subject);
+        onToDChanged(shdk.tod);
+        onGamerChanged(shdk.gamer);
+        onTimerChanged(shdk.timer);
+        onAhCounterChanged(shdk.ahcounter);
+        onGrammarianChanged(shdk.grammarian);
+        onTopicmasterChanged(shdk.topicmaster);
+        onEvaTopicmasterChanged(shdk.evatopicmaster);
+        onGEChanged(shdk.ge);
+        onSpeaker1Changed(shdk.speaker1);
+        onEva1Changed(shdk.eva1);
+        onSpeaker2Changed(shdk.speaker2);
+        onEva2Changed(shdk.eva2);
+        onSpeaker3Changed(shdk.speaker3);
+        onEva3Changed(shdk.eva3);
+        onSpeaker4Changed(shdk.speaker4);
+        onEva4Changed(shdk.eva4);
+        onProject4Changed(shdk.project4);
+        onSpeakName4Changed(shdk.speakname4);
+        onSpeaker5Changed(shdk.speaker5);
+        onEva5Changed(shdk.eva5);
+        onProject5Changed(shdk.project5);
+        onSpeakName5Changed(shdk.speakname5);
+        onSpeaker6Changed(shdk.speaker6);
+        onEva6Changed(shdk.eva6);
+        onProject6Changed(shdk.project6);
+        onSpeakName6Changed(shdk.speakname6);
+    }
+
+    function onSubjectChanged(val) {
+        if (val) {
+            $('#input-subject').val(val);
+        }
+        $('#shdk-subject').toArray().forEach(element => {
+            element.textContent = $('#input-subject').val();
+        });
+        localStorage.setItem('subject', $('#input-subject').val());
+    }
+
+    function onToDChanged(val) {
+        if (val) {
+            $('#input-tod').val(val);
+        }
+        $('[id=shdk-tod]').toArray().forEach(element => {
+            element.textContent = $('#input-tod').val();
+        });
+        localStorage.setItem('tod', $('#input-tod').val());
+    }
+
+    function onGamerChanged(val) {
+        if (val) {
+            $('#input-gamer').val(val);
+        }
+        $('#shdk-gamer').toArray().forEach(element => {
+            element.textContent = $('#input-gamer').val();
+        });
+        localStorage.setItem('gamer', $('#input-gamer').val());
+    }
+
+    function onTimerChanged(val) {
+        if (val) {
+            $('#input-timer').val(val);
+        }
+        $('[id=shdk-timer]').toArray().forEach(element => {
+            element.textContent = $('#input-timer').val();
+        });
+        localStorage.setItem('timer', $('#input-timer').val());
+    }
+
+    function onAhCounterChanged(val) {
+        if (val) {
+            $('#input-ahcounter').val(val);
+        }
+        $('[id=shdk-ahcounter]').toArray().forEach(element => {
+            element.textContent = $('#input-ahcounter').val();
+        });
+        localStorage.setItem('ahcounter', $('#input-ahcounter').val());
+    }
+
+    function onGrammarianChanged(val) {
+        if (val) {
+            $('#input-grammarian').val(val);
+        }
+        $('[id=shdk-grammarian]').toArray().forEach(element => {
+            element.textContent = $('#input-grammarian').val();
+        });
+        localStorage.setItem('grammarian', $('#input-grammarian').val());
+    }
+
+    function onTopicmasterChanged(val) {
+        if (val) {
+            $('#input-topicmaster').val(val);
+        }
+        $('[id=shdk-topicmaster]').toArray().forEach(element => {
+            element.textContent = $('#input-topicmaster').val();
+        });
+        localStorage.setItem('topicmaster', $('#input-topicmaster').val());
+    }
+
+    function onEvaTopicmasterChanged(val) {
+        if (val) {
+            $('#input-evatopicmaster').val(val);
+        }
+        $('#shdk-evatopicmaster').toArray().forEach(element => {
+            element.textContent = $('#input-evatopicmaster').val();
+        });
+        localStorage.setItem('evatopicmaster', $('#input-evatopicmaster').val());
+    }
+
+    function onGEChanged(val) {
+        if (val) {
+            $('#input-ge').val(val);
+        }
+        $('#shdk-ge').toArray().forEach(element => {
+            element.textContent = $('#input-ge').val();
+        });
+        localStorage.setItem('ge', $('#input-ge').val());
+    }
+
+    function onSpeaker1Changed(val) {
+        if (val) {
+            $('#input-speaker1').val(val);
+        }
+        $('[id=shdk-speaker1]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker1').val();
+        });
+        localStorage.setItem('speaker1', $('#input-speaker1').val());
+    }
+
+    function onEva1Changed(val) {
+        if (val) {
+            $('#input-eva1').val(val);
+        }
+        $('[id=shdk-eva1]').toArray().forEach(element => {
+            element.textContent = $('#input-eva1').val();
+        });
+        localStorage.setItem('eva1', $('#input-eva1').val());
+    }
+
+    function onProject1Changed(val) {
+        console.log(val);
+        if (val) {
+            $('#input-project1').val(val);
+        }
+        $('[id=shdk-project1]').toArray().forEach(element => {
+            element.textContent = $('#input-project1').val();
+        });
+        localStorage.setItem('project1', $('#input-project1').val());
+    }
+
+    function onSpeakName1Changed(val) {
+        if (val) {
+            $('#input-speakname1').val(val);
+        }
+        $('[id=shdk-speakname1]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname1').val();
+        });
+        localStorage.setItem('speakname1', $('#input-speakname1').val());
+    }
+
+    function onSpeaker2Changed(val) {
+        if (val) {
+            $('#input-speaker2').val(val);
+        }
+        $('[id=shdk-speaker2]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker2').val();
+        });
+        localStorage.setItem('speaker2', $('#input-speaker2').val());
+    }
+
+    function onEva2Changed(val) {
+        if (val) {
+            $('#input-eva2').val(val);
+        }
+        $('[id=shdk-eva2]').toArray().forEach(element => {
+            element.textContent = $('#input-eva2').val();
+        });
+        localStorage.setItem('eva2', $('#input-eva2').val());
+    }
+
+    function onProject2Changed(val) {
+        if (val) {
+            $('#input-project2').val(val);
+        }
+        $('[id=shdk-project2]').toArray().forEach(element => {
+            element.textContent = $('#input-project2').val();
+        });
+        localStorage.setItem('project2', $('#input-project2').val());
+    }
+
+    function onSpeakName2Changed(val) {
+        if (val) {
+            $('#input-speakname2').val(val);
+        }
+        $('[id=shdk-speakname2]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname2').val();
+        });
+        localStorage.setItem('speakname2', $('#input-speakname2').val());
+    }
+
+
+    function onSpeaker3Changed(val) {
+        if (val) {
+            $('#input-speaker3').val(val);
+        }
+        $('[id=shdk-speaker3]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker3').val();
+        });
+        localStorage.setItem('speaker3', $('#input-speaker3').val());
+    }
+
+    function onEva3Changed(val) {
+        if (val) {
+            $('#input-eva3').val(val);
+        }
+        $('[id=shdk-eva3]').toArray().forEach(element => {
+            element.textContent = $('#input-eva3').val();
+        });
+        localStorage.setItem('eva3', $('#input-eva3').val());
+    }
+
+    function onProject3Changed(val) {
+        if (val) {
+            $('#input-project3').val(val);
+        }
+        $('[id=shdk-project3]').toArray().forEach(element => {
+            element.textContent = $('#input-project3').val();
+        });
+        localStorage.setItem('project3', $('#input-project3').val());
+    }
+
+    function onSpeakName3Changed(val) {
+        if (val) {
+            $('#input-speakname3').val(val);
+        }
+        $('[id=shdk-speakname3]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname3').val();
+        });
+        localStorage.setItem('speakname3', $('#input-speakname3').val());
+    }
+
+
+    function onSpeaker4Changed(val) {
+        if (val) {
+            $('#input-speaker4').val(val);
+        }
+        $('[id=shdk-speaker4]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker4').val();
+        });
+        localStorage.setItem('speaker4', $('#input-speaker4').val());
+    }
+
+    function onEva4Changed(val) {
+        if (val) {
+            $('#input-eva4').val(val);
+        }
+        $('[id=shdk-eva4]').toArray().forEach(element => {
+            element.textContent = $('#input-eva4').val();
+        });
+        localStorage.setItem('eva4', $('#input-eva4').val());
+    }
+
+    function onProject4Changed(val) {
+        if (val) {
+            $('#input-project4').val(val);
+        }
+        $('[id=shdk-project4]').toArray().forEach(element => {
+            element.textContent = $('#input-project4').val();
+        });
+        localStorage.setItem('project4', $('#input-project4').val());
+    }
+
+    function onSpeakName4Changed(val) {
+        if (val) {
+            $('#input-speakname4').val(val);
+        }
+        $('[id=shdk-speakname4]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname4').val();
+        });
+        localStorage.setItem('speakname4', $('#input-speakname4').val());
+    }
+
+    function onSpeaker5Changed(val) {
+        if (val) {
+            $('#input-speaker5').val(val);
+        }
+        $('[id=shdk-speaker5]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker5').val();
+        });
+        localStorage.setItem('speaker5', $('#input-speaker5').val());
+    }
+
+    function onEva5Changed(val) {
+        if (val) {
+            $('#input-eva5').val(val);
+        }
+        $('[id=shdk-eva5]').toArray().forEach(element => {
+            element.textContent = $('#input-eva5').val();
+        });
+        localStorage.setItem('eva5', $('#input-eva5').val());
+    }
+
+    function onProject5Changed(val) {
+        console.log(val);
+        if (val) {
+            $('#input-project5').val(val);
+        }
+        $('[id=shdk-project5]').toArray().forEach(element => {
+            element.textContent = $('#input-project5').val();
+        });
+        localStorage.setItem('project5', $('#input-project5').val());
+    }
+
+    function onSpeakName5Changed(val) {
+        if (val) {
+            $('#input-speakname5').val(val);
+        }
+        $('[id=shdk-speakname5]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname5').val();
+        });
+        localStorage.setItem('speakname5', $('#input-speakname5').val());
+    }
+    function onSpeaker6Changed(val) {
+        if (val) {
+            $('#input-speaker6').val(val);
+        }
+        $('[id=shdk-speaker6]').toArray().forEach(element => {
+            element.textContent = $('#input-speaker6').val();
+        });
+        localStorage.setItem('speaker6', $('#input-speaker6').val());
+    }
+
+    function onEva6Changed(val) {
+        if (val) {
+            $('#input-eva6').val(val);
+        }
+        $('[id=shdk-eva6]').toArray().forEach(element => {
+            element.textContent = $('#input-eva6').val();
+        });
+        localStorage.setItem('eva6', $('#input-eva6').val());
+    }
+
+    function onProject6Changed(val) {
+        console.log(val);
+        if (val) {
+            $('#input-project6').val(val);
+        }
+        $('[id=shdk-project6]').toArray().forEach(element => {
+            element.textContent = $('#input-project6').val();
+        });
+        localStorage.setItem('project6', $('#input-project6').val());
+    }
+
+    function onSpeakName6Changed(val) {
+        if (val) {
+            $('#input-speakname6').val(val);
+        }
+        $('[id=shdk-speakname6]').toArray().forEach(element => {
+            element.textContent = $('#input-speakname6').val();
+        });
+        localStorage.setItem('speakname6', $('#input-speakname6').val());
+    }
+    function changeDateFormat(dateString) {
+        const months = {
+            "jan": "01",
+            "feb": "02",
+            "mar": "03",
+            "apr": "04",
+            "may": "05",
+            "jun": "06",
+            "jul": "07",
+            "aug": "08",
+            "sep": "09",
+            "oct": "10",
+            "nov": "11",
+            "dec": "12"
+        };
+
+        // Kiểm tra xem dateString có tồn tại và có định dạng hợp lệ không
+        if (!dateString || typeof dateString !== 'string') {
+            return null; // hoặc return một giá trị mặc định
+        }
+
+        const [day, month, year] = dateString.split('-');
+
+        // Kiểm tra xem day, month, year có tồn tại hay không
+        if (!day || !month || !year) {
+            console.error('Incomplete date string:', dateString);
+            return null;
+        }
+
+        // Thêm số 0 vào trước ngày nếu cần
+        const dayWithLeadingZero = day.padStart(2, '0');
+
+        // Chuyển tháng sang số
+        const monthNumber = months[month.toLowerCase()];
+
+        // Kiểm tra xem tháng có hợp lệ không
+        if (!monthNumber) {
+            console.error('Invalid month:', month);
+            return null;
+        }
+
+        return `${dayWithLeadingZero}/${monthNumber}/${year}`;
+    }
+
+    function parseSHDKDate(shdkDateString) {
+        // Kiểm tra nếu chuỗi không tồn tại hoặc không phải là chuỗi
+        if (!shdkDateString || typeof shdkDateString !== 'string') {
+            return null; // Trả về null để xử lý sau
+        }
+
+        const [day, month, year] = shdkDateString.split('-');
+
+        if (!day || !month || !year) {
+            console.error('Incomplete date:', shdkDateString);
+            return null;
+        }
+
+        const months = {
+            "jan": "01",
+            "feb": "02",
+            "mar": "03",
+            "apr": "04",
+            "may": "05",
+            "jun": "06",
+            "jul": "07",
+            "aug": "08",
+            "sep": "09",
+            "oct": "10",
+            "nov": "11",
+            "dec": "12"
+        };
+
+        const monthLowerCase = month.toLowerCase();
+        const monthNumber = months[monthLowerCase];
+
+        if (!monthNumber) {
+            console.error('Invalid month:', month);
+            return null;
+        }
+
+        const formattedDate = `${year}-${monthNumber}-${day.padStart(2, '0')}`;
+        return new Date(formattedDate);
+    }
+    function findClosestSHDK() {
+        const currentDate = new Date();
+        let closestSHDK = null;
+        let closestDifference = Infinity;
+
+        shdks.forEach(item => {
+            const shdkDate = parseSHDKDate(item.time);
+
+            if (!shdkDate) {
+                return; // Bỏ qua nếu không thể chuyển đổi ngày
+            }
+
+            const difference = Math.abs(currentDate - shdkDate);
+
+            if (difference < closestDifference) {
+                closestDifference = difference;
+                closestSHDK = item;
+            }
+        });
+
+        return closestSHDK;
+    }
+</script>
