@@ -41,6 +41,12 @@ async function getAllSHDK() {
     const topicmasters = rows[23].querySelectorAll('td');
     const evatopicmasters = rows[25].querySelectorAll('td');
     const gamers = rows[26].querySelectorAll('td');
+    const timer1s = rows[27]?.querySelectorAll('td') ?? [];
+    const timer2s = rows[28]?.querySelectorAll('td') ?? [];
+    const ahcounter1s = rows[29]?.querySelectorAll('td') ?? [];
+    const ahcounter2s = rows[30]?.querySelectorAll('td') ?? [];
+    const grammarian1s = rows[31]?.querySelectorAll('td') ?? [];
+    const grammarian2s = rows[32]?.querySelectorAll('td') ?? [];
     
 
 
@@ -69,6 +75,12 @@ async function getAllSHDK() {
             topicmaster: topicmasters[index].textContent,
             evatopicmaster: evatopicmasters[index].textContent,
             gamer: gamers[index].textContent,
+            timer1: timer1s[index]?.textContent ?? '',
+            timer2: timer2s[index]?.textContent ?? '',
+            ahcounter1: ahcounter1s[index]?.textContent ?? '',
+            ahcounter2: ahcounter2s[index]?.textContent ?? '',
+            grammarian1: grammarian1s[index]?.textContent ?? '',
+            grammarian2: grammarian2s[index]?.textContent ?? '',
         }) 
     });
 
